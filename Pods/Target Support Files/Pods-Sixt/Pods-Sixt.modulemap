@@ -1,0 +1,6 @@
+framework module Pods_Sixt {
+  umbrella header "Pods-Sixt-umbrella.h"
+
+  export *
+  module * { export * }
+}

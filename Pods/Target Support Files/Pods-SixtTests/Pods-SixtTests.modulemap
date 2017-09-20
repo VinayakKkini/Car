@@ -1,0 +1,6 @@
+framework module Pods_SixtTests {
+  umbrella header "Pods-SixtTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
