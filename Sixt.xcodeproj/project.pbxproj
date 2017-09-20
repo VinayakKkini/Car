@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23AB160B1F72DDA800437006 /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB160A1F72DDA800437006 /* CarListService.swift */; };
+		23AB16101F72F81100437006 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB160F1F72F81100437006 /* CarListViewModel.swift */; };
 		23B9366A1F72A13F0017C7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B936691F72A13F0017C7EB /* AppDelegate.swift */; };
-		23B9366C1F72A13F0017C7EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9366B1F72A13F0017C7EB /* ViewController.swift */; };
+		23B9366C1F72A13F0017C7EB /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9366B1F72A13F0017C7EB /* CarListViewController.swift */; };
 		23B9366F1F72A13F0017C7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9366D1F72A13F0017C7EB /* Main.storyboard */; };
 		23B936711F72A13F0017C7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B936701F72A13F0017C7EB /* Assets.xcassets */; };
 		23B936741F72A13F0017C7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */; };
 		23B9367F1F72A13F0017C7EB /* Sixt_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9367E1F72A13F0017C7EB /* Sixt_AssignmentTests.swift */; };
 		23B9368A1F72A4190017C7EB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B936891F72A4190017C7EB /* Car.swift */; };
+		33C1EC14B3B197F77C11E0B5 /* Pods_Sixt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF36EFCD256435EDE47039 /* Pods_Sixt.framework */; };
+		9484CF19295403B8CBE51811 /* Pods_SixtTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC3CAC3CC173AC3F34E53CE /* Pods_SixtTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +31,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23B936661F72A13F0017C7EB /* Sixt Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sixt Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C070B46E93A30A59368B720 /* Pods-SixtTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixtTests/Pods-SixtTests.release.xcconfig"; sourceTree = "<group>"; };
+		1EC3CAC3CC173AC3F34E53CE /* Pods_SixtTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixtTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233C6107EF933E434C1E089A /* Pods-SixtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtTests/Pods-SixtTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23AB160A1F72DDA800437006 /* CarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListService.swift; sourceTree = "<group>"; };
+		23AB160F1F72F81100437006 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		23B936661F72A13F0017C7EB /* Sixt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sixt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B936691F72A13F0017C7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23B9366B1F72A13F0017C7EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23B9366B1F72A13F0017C7EB /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		23B9366E1F72A13F0017C7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23B936701F72A13F0017C7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23B936731F72A13F0017C7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B936751F72A13F0017C7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23B9367A1F72A13F0017C7EB /* Sixt AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sixt AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B9367A1F72A13F0017C7EB /* SixtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SixtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B9367E1F72A13F0017C7EB /* Sixt_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sixt_AssignmentTests.swift; sourceTree = "<group>"; };
 		23B936801F72A13F0017C7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23B936891F72A4190017C7EB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		A3DF36EFCD256435EDE47039 /* Pods_Sixt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sixt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB460F2DFF58A27520FAB2DA /* Pods-Sixt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sixt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sixt/Pods-Sixt.release.xcconfig"; sourceTree = "<group>"; };
+		E83640E4C9ACE9C519FC3B5A /* Pods-Sixt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sixt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sixt/Pods-Sixt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C1EC14B3B197F77C11E0B5 /* Pods_Sixt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,26 +65,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9484CF19295403B8CBE51811 /* Pods_SixtTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23AB160C1F72F7C500437006 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23B936891F72A4190017C7EB /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23AB160D1F72F7D500437006 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				23AB160A1F72DDA800437006 /* CarListService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		23AB160E1F72F7F200437006 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				23B9366B1F72A13F0017C7EB /* CarListViewController.swift */,
+				23AB160F1F72F81100437006 /* CarListViewModel.swift */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
 		23B9365D1F72A13F0017C7EB = {
 			isa = PBXGroup;
 			children = (
 				23B936681F72A13F0017C7EB /* Sixt Assignment */,
 				23B9367D1F72A13F0017C7EB /* Sixt AssignmentTests */,
 				23B936671F72A13F0017C7EB /* Products */,
+				9188D920BF9D82B844DB95EE /* Pods */,
+				3E9834BF9B4F2A5681CEC824 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		23B936671F72A13F0017C7EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23B936661F72A13F0017C7EB /* Sixt Assignment.app */,
-				23B9367A1F72A13F0017C7EB /* Sixt AssignmentTests.xctest */,
+				23B936661F72A13F0017C7EB /* Sixt.app */,
+				23B9367A1F72A13F0017C7EB /* SixtTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				23B936691F72A13F0017C7EB /* AppDelegate.swift */,
-				23B936891F72A4190017C7EB /* Car.swift */,
-				23B9366B1F72A13F0017C7EB /* ViewController.swift */,
+				23AB160C1F72F7C500437006 /* Models */,
+				23AB160D1F72F7D500437006 /* NetworkServices */,
+				23AB160E1F72F7F200437006 /* CarList */,
 				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
 				23B936701F72A13F0017C7EB /* Assets.xcassets */,
 				23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */,
@@ -99,42 +141,68 @@
 			path = "Sixt AssignmentTests";
 			sourceTree = "<group>";
 		};
+		3E9834BF9B4F2A5681CEC824 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF36EFCD256435EDE47039 /* Pods_Sixt.framework */,
+				1EC3CAC3CC173AC3F34E53CE /* Pods_SixtTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9188D920BF9D82B844DB95EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E83640E4C9ACE9C519FC3B5A /* Pods-Sixt.debug.xcconfig */,
+				CB460F2DFF58A27520FAB2DA /* Pods-Sixt.release.xcconfig */,
+				233C6107EF933E434C1E089A /* Pods-SixtTests.debug.xcconfig */,
+				0C070B46E93A30A59368B720 /* Pods-SixtTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23B936651F72A13F0017C7EB /* Sixt Assignment */ = {
+		23B936651F72A13F0017C7EB /* Sixt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23B936831F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt Assignment" */;
+			buildConfigurationList = 23B936831F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt" */;
 			buildPhases = (
+				0D123880CE9301D0C7E02A5F /* [CP] Check Pods Manifest.lock */,
 				23B936621F72A13F0017C7EB /* Sources */,
 				23B936631F72A13F0017C7EB /* Frameworks */,
 				23B936641F72A13F0017C7EB /* Resources */,
+				085BEE1BC986ED49745C0E80 /* [CP] Embed Pods Frameworks */,
+				2DF8D39D55892F2E3A0C2525 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Sixt Assignment";
+			name = Sixt;
 			productName = "Sixt Assignment";
-			productReference = 23B936661F72A13F0017C7EB /* Sixt Assignment.app */;
+			productReference = 23B936661F72A13F0017C7EB /* Sixt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		23B936791F72A13F0017C7EB /* Sixt AssignmentTests */ = {
+		23B936791F72A13F0017C7EB /* SixtTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23B936861F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt AssignmentTests" */;
+			buildConfigurationList = 23B936861F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "SixtTests" */;
 			buildPhases = (
+				CC7425ED9069DDDDA53E8C7E /* [CP] Check Pods Manifest.lock */,
 				23B936761F72A13F0017C7EB /* Sources */,
 				23B936771F72A13F0017C7EB /* Frameworks */,
 				23B936781F72A13F0017C7EB /* Resources */,
+				234211721AD911FA6CD130E6 /* [CP] Embed Pods Frameworks */,
+				0643C1CC4C663F7443C53DE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				23B9367C1F72A13F0017C7EB /* PBXTargetDependency */,
 			);
-			name = "Sixt AssignmentTests";
+			name = SixtTests;
 			productName = "Sixt AssignmentTests";
-			productReference = 23B9367A1F72A13F0017C7EB /* Sixt AssignmentTests.xctest */;
+			productReference = 23B9367A1F72A13F0017C7EB /* SixtTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23B936611F72A13F0017C7EB /* Build configuration list for PBXProject "Sixt Assignment" */;
+			buildConfigurationList = 23B936611F72A13F0017C7EB /* Build configuration list for PBXProject "Sixt" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23B936651F72A13F0017C7EB /* Sixt Assignment */,
-				23B936791F72A13F0017C7EB /* Sixt AssignmentTests */,
+				23B936651F72A13F0017C7EB /* Sixt */,
+				23B936791F72A13F0017C7EB /* SixtTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,14 +265,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0643C1CC4C663F7443C53DE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixtTests/Pods-SixtTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		085BEE1BC986ED49745C0E80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sixt/Pods-Sixt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sixt/Pods-Sixt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D123880CE9301D0C7E02A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sixt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		234211721AD911FA6CD130E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixtTests/Pods-SixtTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DF8D39D55892F2E3A0C2525 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sixt/Pods-Sixt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC7425ED9069DDDDA53E8C7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SixtTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23B936621F72A13F0017C7EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23B9366C1F72A13F0017C7EB /* ViewController.swift in Sources */,
+				23AB16101F72F81100437006 /* CarListViewModel.swift in Sources */,
+				23B9366C1F72A13F0017C7EB /* CarListViewController.swift in Sources */,
 				23B9366A1F72A13F0017C7EB /* AppDelegate.swift in Sources */,
 				23B9368A1F72A4190017C7EB /* Car.swift in Sources */,
+				23AB160B1F72DDA800437006 /* CarListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +395,7 @@
 /* Begin PBXTargetDependency section */
 		23B9367C1F72A13F0017C7EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 23B936651F72A13F0017C7EB /* Sixt Assignment */;
+			target = 23B936651F72A13F0017C7EB /* Sixt */;
 			targetProxy = 23B9367B1F72A13F0017C7EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -355,13 +529,15 @@
 		};
 		23B936841F72A13F0017C7EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83640E4C9ACE9C519FC3B5A /* Pods-Sixt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PY9ELS4KX;
 				INFOPLIST_FILE = "Sixt Assignment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vinayak.Sixt-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinayak.Sixt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,13 +546,15 @@
 		};
 		23B936851F72A13F0017C7EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB460F2DFF58A27520FAB2DA /* Pods-Sixt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PY9ELS4KX;
 				INFOPLIST_FILE = "Sixt Assignment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vinayak.Sixt-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinayak.Sixt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,6 +563,7 @@
 		};
 		23B936871F72A13F0017C7EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233C6107EF933E434C1E089A /* Pods-SixtTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -396,12 +575,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixt Assignment.app/Sixt Assignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixt.app/Sixt";
 			};
 			name = Debug;
 		};
 		23B936881F72A13F0017C7EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C070B46E93A30A59368B720 /* Pods-SixtTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,14 +593,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixt Assignment.app/Sixt Assignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sixt.app/Sixt";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23B936611F72A13F0017C7EB /* Build configuration list for PBXProject "Sixt Assignment" */ = {
+		23B936611F72A13F0017C7EB /* Build configuration list for PBXProject "Sixt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23B936811F72A13F0017C7EB /* Debug */,
@@ -429,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23B936831F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt Assignment" */ = {
+		23B936831F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23B936841F72A13F0017C7EB /* Debug */,
@@ -438,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23B936861F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "Sixt AssignmentTests" */ = {
+		23B936861F72A13F0017C7EB /* Build configuration list for PBXNativeTarget "SixtTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23B936871F72A13F0017C7EB /* Debug */,
