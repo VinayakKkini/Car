@@ -18,26 +18,53 @@ import CoreLocation
  */
 
 
-/// Model to represent the car model.
+/// Model to represent the car.
 struct Car: Codable {
     
+    /// car identifier
     var id: String?
+    
+    /// model identifier of the car
     var modelIdentifier: String?
+    
+    /// contains the model name
     var modelName: String?
+    
+    ///  contains the car owner's name
     var name: String?
+    
+    ///  specifies the make of the car
     var make: String?
+    
+    /// category to which it belongs
     var group: String?
+    
+    /// color of the car
     var color: String?
+    
+    /// Series to which the car belongs
     var series: String?
+    
+    /// information about the type of fuel used by the car
     var fuelType = FuelType.petrol
+    
+    /// type of fuel used by the car
     var fuelLevel: Float = 0
+    
+    /// Transmission mode of the car
     var transmission = TransmissionMode.automatic
+    
+    /// license number of the car
     var licensePlate: String?
+    
+    /// describes about the cleanliness of the car
     var innerCleanliness = Cleanliness.veryClean
     
     private var latitude: CLLocationDegrees = 0
     private var longitude: CLLocationDegrees = 0
     
+    
+    /// Used for display purposes.
     enum DisplayKeys: String {
         case owner = "Owner"
         case modelName = "Model Name"
@@ -45,10 +72,67 @@ struct Car: Codable {
         case cleanliness = "Cleanliness"
         case transmission = "Transmission"
     }
+    
+    /// Enum for identifying the Type of fuel used by the car
+    enum FuelType: String, Codable {
+        case diesel = "D"
+        case petrol = "P"
+        case electric = "E"
+        
+        /// Title for display purposes
+        var displayTitle: String {
+            switch self {
+            case .diesel:
+                return "Diesel"
+            case .petrol:
+                return "Petrol"
+            case .electric:
+                return "Electric"
+            }
+        }
+    }
+    
+    
+    /// Enum to identify the mode of tranmission of the vehicle
+    enum TransmissionMode: String, Codable {
+        case manual = "M"
+        case automatic = "A"
+        
+        /// To be used for display purposes in the UI
+        var displayTitle: String {
+            switch self {
+            case .manual:
+                return "Manual"
+            case .automatic:
+                return "Automatic"
+            }
+        }
+    }
+    
+    
+    /// Enum to identify the cleanliness of the car
+    enum Cleanliness: String, Codable {
+        case clean = "CLEAN"
+        case veryClean = "VERY_CLEAN"
+        case regular = "REGULAR"
+        
+        /// Can be used for display purposes
+        var displayTitle: String {
+            switch self {
+            case .clean:
+                return "Clean"
+            case .veryClean:
+                return "Very Clean"
+            case .regular:
+                return "Regular"
+            }
+        }
+    }
 }
 
 extension Car {
     
+    /// URL of the car image
     var carImageURL: URL? {
         guard let modelID = modelIdentifier, let color = color else {
             return nil
@@ -59,66 +143,10 @@ extension Car {
         return URL(string: urlString)
     }
     
+    
+    /// specifies the current location of the car
     var location: CLLocationCoordinate2D? {
         return CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
-    }
-}
-
-
-
-/// Enum for identifying the Type of fuel used by the car
-enum FuelType: String, Codable {
-    case diesel = "D"
-    case petrol = "P"
-    case electric = "E"
-    
-    /// Title for display purposes
-    var displayTitle: String {
-        switch self {
-        case .diesel:
-            return "Diesel"
-        case .petrol:
-            return "Petrol"
-        case .electric:
-            return "Electric"
-        }
-    }
-}
-
-
-/// Enum to identify the mode of tranmission of the vehicle
-enum TransmissionMode: String, Codable {
-    case manual = "M"
-    case automatic = "A"
-    
-    /// To be used for display purposes in the UI
-    var displayTitle: String {
-        switch self {
-        case .manual:
-            return "Manual"
-        case .automatic:
-            return "Automatic"
-        }
-    }
-}
-
-
-/// Enum to identify the cleanliness of the car
-enum Cleanliness: String, Codable {
-    case clean = "CLEAN"
-    case veryClean = "VERY_CLEAN"
-    case regular = "REGULAR"
-    
-    /// Can be used for display purposes
-    var displayTitle: String {
-        switch self {
-        case .clean:
-            return "Clean"
-        case .veryClean:
-            return "Very Clean"
-        case .regular:
-            return "Regular"
-        }
     }
 }
 
