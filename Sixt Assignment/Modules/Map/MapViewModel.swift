@@ -13,7 +13,7 @@ class MapViewModel: NSObject {
     private let annotationIdentifier = "CarAnnotationIdentifier"
     private weak var controllerView: MapViewController?
 
-    private var cars: [Car]? {
+    var cars: [Car]? {
         didSet {
             addCarAnnotations()
         }
@@ -26,24 +26,12 @@ class MapViewModel: NSObject {
         controllerView = controller
         controllerView?.mapView.delegate = self
         centerMapOnLocation()
-        fetchCars()
-    }
-    
-    
-    /// can be used to fetch cars from the server
-    private func fetchCars() {
-        controllerView?.showHUD(withStatus: "Loading")
-        CarListService.shared.fetch { [weak self] (error, cars) in
-            guard error == nil else {
-                self?.controllerView?.dismissHUD()
-                self?.cars = nil
-                return
-            }
-            self?.controllerView?.dismissHUD()
-            self?.cars = cars
-        }
+        fetchCars(on: controllerView)
     }
 }
+
+// MARK: - FetchCar conformation
+extension MapViewModel: FetchCar { }
 
 
 // MARK: - Location and Annotation related methods

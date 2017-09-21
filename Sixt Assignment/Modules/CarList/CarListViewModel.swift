@@ -13,7 +13,7 @@ class CarListViewModel: NSObject {
     private let cellIdentifier = "CarListCell"
     private weak var controllerView: CarListViewController?
     
-    private var cars: [Car]? {
+    var cars: [Car]? {
         didSet {
             self.controllerView?.tableView.reloadData()
         }
@@ -25,21 +25,12 @@ class CarListViewModel: NSObject {
         self.controllerView?.tableView.delegate = self
         self.controllerView?.tableView.dataSource = self
         self.controllerView?.tableView.tableFooterView = UIView()
-        self.fetchCars()
+        self.fetchCars(on: controllerView)
     }
+}
+
+extension CarListViewModel: FetchCar {    
     
-    private func fetchCars() {
-        controllerView?.showHUD(withStatus: "Loading")
-        CarListService.shared.fetch { [weak self] (error, cars) in
-            guard error == nil else {
-                self?.controllerView?.dismissHUD()
-                self?.cars = nil
-                return
-            }
-            self?.cars = cars
-            self?.controllerView?.dismissHUD()
-        }
-    }
 }
 
 extension CarListViewModel: UITableViewDelegate
