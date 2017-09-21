@@ -91,7 +91,6 @@
 			children = (
 				23205E2D1F73FC970037BB4F /* MapViewController.swift */,
 				23205E2F1F73FCA00037BB4F /* MapViewModel.swift */,
-				23205E311F740DFC0037BB4F /* CarAnnotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -99,6 +98,7 @@
 		23AB160C1F72F7C500437006 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23205E311F740DFC0037BB4F /* CarAnnotation.swift */,
 				23B936891F72A4190017C7EB /* Car.swift */,
 			);
 			path = Models;
@@ -149,10 +149,9 @@
 				23B936691F72A13F0017C7EB /* AppDelegate.swift */,
 				23AB160C1F72F7C500437006 /* Models */,
 				23AB160D1F72F7D500437006 /* NetworkServices */,
-				23205E2A1F73FC3E0037BB4F /* Map */,
-				23AB160E1F72F7F200437006 /* CarList */,
-				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
+				23E8E6351F7448B200577C9E /* Modules */,
 				23E8E6341F74441000577C9E /* HUD */,
+				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
 				23B936701F72A13F0017C7EB /* Assets.xcassets */,
 				23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */,
 				23B936751F72A13F0017C7EB /* Info.plist */,
@@ -176,6 +175,15 @@
 				23E8E6301F743CEC00577C9E /* DisplayHUD.swift */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		23E8E6351F7448B200577C9E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				23AB160E1F72F7F200437006 /* CarList */,
+				23205E2A1F73FC3E0037BB4F /* Map */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3E9834BF9B4F2A5681CEC824 /* Frameworks */ = {
