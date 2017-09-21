@@ -17,7 +17,7 @@ protocol FetchCar: class {
 
 extension FetchCar {
     
-    /// Fetches the car from the server
+    /// Fetch the available cars from the server
     ///
     /// - Parameter controllerView: Any class that conforms to DisplayHUD
     func fetchCars(on controllerView: DisplayHUD?) {
