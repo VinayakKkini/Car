@@ -9,8 +9,15 @@
 import Foundation
 import UIKit
 
-protocol DisplayHUD {    
+protocol DisplayHUD {
+    
+    /// Used to display HUD with the required status
+    ///
+    /// - Parameter status: Status to be displayed on the HUD
     func showHUD(withStatus status: String)
+    
+    
+    /// Dismisses the existing HUD
     func dismissHUD()
 }
 
