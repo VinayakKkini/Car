@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Map View-->
         <scene sceneID="p0B-BV-QSP">
             <objects>
                 <viewController id="HfK-GV-uO8" customClass="MapViewController" customModule="Sixt" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zPW-VZ-S54">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,16 +33,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0JX-YG-gi4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="Rxc-rH-bQ7"/>
+                    <navigationItem key="navigationItem" title="Map View" id="7Ur-5h-aFL"/>
                     <connections>
                         <outlet property="mapView" destination="zPW-VZ-S54" id="Bb9-sW-p3n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcA-6j-tFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552.79999999999995" y="313.49325337331339"/>
+            <point key="canvasLocation" x="1714" y="313"/>
         </scene>
-        <!--List-->
+        <!--Sixt Cars-->
         <scene sceneID="qo2-hW-tzO">
             <objects>
                 <viewController id="7Bw-9G-hVy" customClass="CarListViewController" customModule="Sixt" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9mf-77-WmH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarListCell" rowHeight="109" id="X4S-ih-UmU" customClass="CarListCell" customModule="Sixt" customModuleProvider="target">
@@ -141,14 +141,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="duk-Hs-HIZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" id="kMh-8q-oQZ"/>
+                    <navigationItem key="navigationItem" title="Sixt Cars" id="cAi-TZ-kCS"/>
                     <connections>
                         <outlet property="tableView" destination="9mf-77-WmH" id="sOp-zz-geT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nws-jw-paR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="553" y="-491"/>
+            <point key="canvasLocation" x="1375" y="-492"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fNl-3Z-653">
@@ -160,16 +160,116 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7Bw-9G-hVy" kind="relationship" relationship="viewControllers" id="zNG-1m-gDj"/>
-                        <segue destination="HfK-GV-uO8" kind="relationship" relationship="viewControllers" id="plg-bn-uKL"/>
+                        <segue destination="1Hp-UM-fia" kind="relationship" relationship="viewControllers" id="zNG-1m-gDj"/>
+                        <segue destination="afi-rn-qqI" kind="relationship" relationship="viewControllers" id="plg-bn-uKL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SuG-23-24U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-398" y="-18"/>
         </scene>
+        <!--List-->
+        <scene sceneID="HIg-ap-BEo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Hp-UM-fia" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="tab-car-icon" id="kMh-8q-oQZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v2G-3c-gTv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Bw-9G-hVy" kind="relationship" relationship="rootViewController" id="PF8-i4-z72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saz-nR-teI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="-491.15442278860576"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="SSm-Wk-O1E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="afi-rn-qqI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="tab-map-icon" id="Rxc-rH-bQ7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X5T-iV-uRC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HfK-GV-uO8" kind="relationship" relationship="rootViewController" id="63L-wg-vgw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cl4-B8-R7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="313.04347826086956"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="cOg-vM-syC">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" id="q3m-IO-QoY" customClass="ActivityViewController" customModule="ActionExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lV2-BX-y7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="G4c-Pj-ERP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aQQ-6Q-3Om">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-z9-7Lj" userLabel="ContainerView">
+                                <rect key="frame" x="126.5" y="287" width="123.5" height="92.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P8P-iP-oN5">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="92.5"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Co5-jh-Lfb">
+                                                <rect key="frame" x="43.5" y="15" width="37" height="37"/>
+                                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-mI-DlZ">
+                                                <rect key="frame" x="10" y="57" width="103.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="15" left="10" bottom="15" right="10"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.48932990770000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="P8P-iP-oN5" secondAttribute="trailing" id="603-QL-n5I"/>
+                                    <constraint firstAttribute="bottom" secondItem="P8P-iP-oN5" secondAttribute="bottom" id="FLW-ky-JI0"/>
+                                    <constraint firstItem="P8P-iP-oN5" firstAttribute="top" secondItem="6Wc-z9-7Lj" secondAttribute="top" id="kGH-tA-4MF"/>
+                                    <constraint firstItem="P8P-iP-oN5" firstAttribute="leading" secondItem="6Wc-z9-7Lj" secondAttribute="leading" id="yE3-zT-bOk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Wc-z9-7Lj" firstAttribute="centerY" secondItem="aQQ-6Q-3Om" secondAttribute="centerY" id="56F-6O-6Qx"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Wc-z9-7Lj" secondAttribute="trailing" constant="5" id="NB3-Dg-She"/>
+                            <constraint firstItem="6Wc-z9-7Lj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aQQ-6Q-3Om" secondAttribute="leading" constant="5" id="gAn-eP-tMM"/>
+                            <constraint firstItem="6Wc-z9-7Lj" firstAttribute="centerX" secondItem="aQQ-6Q-3Om" secondAttribute="centerX" id="vXd-YO-hso"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WaJ-aW-H3g"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Co5-jh-Lfb" id="qmP-s0-qSB"/>
+                        <outlet property="containerView" destination="6Wc-z9-7Lj" id="5Ak-gf-kDr"/>
+                        <outlet property="titleLabel" destination="SrS-mI-DlZ" id="TqB-DJ-2aA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehp-QT-yuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="699"/>
+        </scene>
     </scenes>
     <resources>
         <image name="car-placeholder" width="37" height="37"/>
+        <image name="tab-car-icon" width="25" height="25"/>
+        <image name="tab-map-icon" width="25" height="25"/>
     </resources>
 </document>
