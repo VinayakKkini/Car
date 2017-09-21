@@ -9,7 +9,6 @@
 import UIKit
 
 class ActivityViewController: UIViewController {
-    
     var message: String?
     
     @IBOutlet weak var containerView: UIView!
@@ -23,12 +22,7 @@ class ActivityViewController: UIViewController {
         containerView.layer.cornerRadius = 10.0;
         containerView.layer.masksToBounds = true
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     class func instantiate() -> ActivityViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
