@@ -37,6 +37,14 @@ struct Car: Codable {
     
     private var latitude: CLLocationDegrees = 0
     private var longitude: CLLocationDegrees = 0
+    
+    enum DisplayKeys: String {
+        case owner = "Owner"
+        case modelName = "Model Name"
+        case fuelType = "Fuel Type"
+        case cleanliness = "Cleanliness"
+        case transmission = "Transmission"
+    }
 }
 
 extension Car {
