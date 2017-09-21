@@ -51,8 +51,8 @@ extension Car {
         return URL(string: urlString)
     }
     
-    var location: CLLocation? {
-        return CLLocation(latitude:latitude, longitude: longitude)
+    var location: CLLocationCoordinate2D? {
+        return CLLocationCoordinate2D(latitude:latitude, longitude: longitude)
     }
 }
 
