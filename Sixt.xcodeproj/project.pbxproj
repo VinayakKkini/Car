@@ -21,6 +21,8 @@
 		23B936741F72A13F0017C7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */; };
 		23B9367F1F72A13F0017C7EB /* Sixt_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9367E1F72A13F0017C7EB /* Sixt_AssignmentTests.swift */; };
 		23B9368A1F72A4190017C7EB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B936891F72A4190017C7EB /* Car.swift */; };
+		23E8E62F1F743CC600577C9E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8E62E1F743CC600577C9E /* ActivityViewController.swift */; };
+		23E8E6311F743CEC00577C9E /* DisplayHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8E6301F743CEC00577C9E /* DisplayHUD.swift */; };
 		33C1EC14B3B197F77C11E0B5 /* Pods_Sixt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF36EFCD256435EDE47039 /* Pods_Sixt.framework */; };
 		9484CF19295403B8CBE51811 /* Pods_SixtTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC3CAC3CC173AC3F34E53CE /* Pods_SixtTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		23B9367E1F72A13F0017C7EB /* Sixt_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sixt_AssignmentTests.swift; sourceTree = "<group>"; };
 		23B936801F72A13F0017C7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23B936891F72A4190017C7EB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		23E8E62E1F743CC600577C9E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		23E8E6301F743CEC00577C9E /* DisplayHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayHUD.swift; sourceTree = "<group>"; };
 		A3DF36EFCD256435EDE47039 /* Pods_Sixt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sixt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB460F2DFF58A27520FAB2DA /* Pods-Sixt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sixt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sixt/Pods-Sixt.release.xcconfig"; sourceTree = "<group>"; };
 		E83640E4C9ACE9C519FC3B5A /* Pods-Sixt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sixt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sixt/Pods-Sixt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				23205E2A1F73FC3E0037BB4F /* Map */,
 				23AB160E1F72F7F200437006 /* CarList */,
 				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
+				23E8E6341F74441000577C9E /* HUD */,
 				23B936701F72A13F0017C7EB /* Assets.xcassets */,
 				23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */,
 				23B936751F72A13F0017C7EB /* Info.plist */,
@@ -162,6 +167,15 @@
 				23B936801F72A13F0017C7EB /* Info.plist */,
 			);
 			path = "Sixt AssignmentTests";
+			sourceTree = "<group>";
+		};
+		23E8E6341F74441000577C9E /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				23E8E62E1F743CC600577C9E /* ActivityViewController.swift */,
+				23E8E6301F743CEC00577C9E /* DisplayHUD.swift */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		3E9834BF9B4F2A5681CEC824 /* Frameworks */ = {
@@ -407,6 +421,8 @@
 				23AB16141F7303AC00437006 /* CarListCell.swift in Sources */,
 				23AB160B1F72DDA800437006 /* CarListService.swift in Sources */,
 				23205E321F740DFC0037BB4F /* CarAnnotation.swift in Sources */,
+				23E8E6311F743CEC00577C9E /* DisplayHUD.swift in Sources */,
+				23E8E62F1F743CC600577C9E /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

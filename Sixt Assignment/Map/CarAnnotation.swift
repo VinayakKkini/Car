@@ -9,6 +9,8 @@
 import Foundation
 import MapKit
 
+
+/// Annotation model for the car
 class CarAnnotation: NSObject, MKAnnotation {
     private let car: Car
     

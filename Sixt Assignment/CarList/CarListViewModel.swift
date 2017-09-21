@@ -11,6 +11,7 @@ import UIKit
 
 class CarListViewModel: NSObject {
     private let cellIdentifier = "CarListCell"
+    private weak var controllerView: CarListViewController?
     
     private var cars: [Car]? {
         didSet {
@@ -18,8 +19,7 @@ class CarListViewModel: NSObject {
         }
     }
     
-    private weak var controllerView: CarListViewController?
-    
+    /// sets up the view model 
     func setup(with controller: CarListViewController) {
         self.controllerView = controller
         self.controllerView?.tableView.delegate = self
