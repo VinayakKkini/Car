@@ -23,6 +23,7 @@ class CarListCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         // clean up all resources
         carImageView.image = #imageLiteral(resourceName: "car-placeholder")
         owner.text = nil
@@ -31,7 +32,6 @@ class CarListCell: UITableViewCell {
         cleanliness.text = nil
         transmission.text = nil
     }
-    
     
     /// Configure the cell with `Car` object
     ///
@@ -57,17 +57,14 @@ class CarListCell: UITableViewCell {
     }
 }
 
-
-
-extension CarListCell {
+private extension CarListCell {
     
     /// Creates an attributted string by combining both title and values. Title will have bold font and
     /// value being regular weight.
-    private func attributedString(with title: String, value: String) -> NSAttributedString {
-        let attribute = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize:15), NSAttributedStringKey.foregroundColor: UIColor.black]
+    func attributedString(with title: String, value: String) -> NSAttributedString {
+        let attribute = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 15), NSAttributedStringKey.foregroundColor: UIColor.black]
         let attributedTitle = NSMutableAttributedString(string: title, attributes: attribute)
         attributedTitle.append(NSAttributedString(string: ": \(value)"))
         return attributedTitle
     }
-    
 }

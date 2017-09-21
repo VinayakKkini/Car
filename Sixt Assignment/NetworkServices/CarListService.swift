@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class CarListService: NSObject {
+class CarListService {
     
     // URL for fetching the available cars
     private let carServiceURLString = "http://www.codetalk.de/cars.json"
@@ -36,7 +36,6 @@ class CarListService: NSObject {
             let carList = try? JSONDecoder().decode(Array<Car>.self, from: data)
             completion(nil, carList)
         }
-        
     }
 }
 

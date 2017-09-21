@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class CarImageService: NSObject {
+class CarImageService {
     
     // Shared instance of CarImageService
     static let shared = CarImageService()

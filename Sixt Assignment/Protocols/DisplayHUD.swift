@@ -21,3 +21,21 @@ protocol DisplayHUD {
     func dismissHUD()
 }
 
+extension UIViewController: DisplayHUD {
+    func showHUD(withStatus status: String) {
+        
+        guard !(presentedViewController is ActivityViewController) else {
+            return
+        }
+        
+        let alert = ActivityViewController.instantiate()
+        alert.message = status
+        alert.modalPresentationStyle = .overCurrentContext
+        alert.modalTransitionStyle = .crossDissolve
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func dismissHUD() {
+        dismiss(animated: true, completion: nil)
+    }
+}

@@ -17,24 +17,3 @@ class CarListViewController: UIViewController {
         model.setup(with: self)
     }
 }
-
-extension CarListViewController: DisplayHUD {
-    
-    func showHUD(withStatus status: String) {
-        
-        guard !(self.presentedViewController is ActivityViewController) else {
-            return
-        }
-        
-        let alert = ActivityViewController.instantiate()
-        alert.message = status
-        alert.modalPresentationStyle = .overCurrentContext
-        alert.modalTransitionStyle = .crossDissolve
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func dismissHUD() {
-        self.dismiss(animated: true, completion: nil)
-    }
-}
-

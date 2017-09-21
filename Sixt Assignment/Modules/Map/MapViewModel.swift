@@ -31,12 +31,10 @@ class MapViewModel: NSObject {
 }
 
 // MARK: - FetchCar conformation
-extension MapViewModel: FetchCar { }
-
+extension MapViewModel: FetchCar {}
 
 // MARK: - Location and Annotation related methods
 private extension MapViewModel {
-    
     
     /// Adds various car into map
     func addCarAnnotations() {

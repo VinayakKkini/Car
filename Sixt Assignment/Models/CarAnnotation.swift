@@ -11,12 +11,15 @@ import MapKit
 
 
 /// Annotation model for the car
-class CarAnnotation: NSObject, MKAnnotation {
+class CarAnnotation: NSObject {
     private let car: Car
     
     init(with car: Car) {
         self.car = car
     }
+}
+
+extension CarAnnotation: MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D {
         guard let location = car.location else {
@@ -31,6 +34,5 @@ class CarAnnotation: NSObject, MKAnnotation {
     
     var subtitle: String? {
         return car.licensePlate
-    } 
+    }
 }
-

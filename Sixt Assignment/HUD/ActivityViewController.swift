@@ -18,7 +18,7 @@ class ActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel.text = message
+        titleLabel.text = message
         containerView.layer.cornerRadius = 10.0;
         containerView.layer.masksToBounds = true
     }
