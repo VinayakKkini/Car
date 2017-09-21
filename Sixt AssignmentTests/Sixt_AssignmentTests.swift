@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Sixt_Assignment
 
 class Sixt_AssignmentTests: XCTestCase {
     
