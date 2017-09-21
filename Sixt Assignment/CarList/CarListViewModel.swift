@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 class CarListViewModel: NSObject {
     private let cellIdentifier = "CarListCell"
@@ -18,7 +19,7 @@ class CarListViewModel: NSObject {
         }
     }
     
-    weak var controllerView: CarListViewController?
+    private weak var controllerView: CarListViewController?
     
     func setup(with controller: CarListViewController) {
         self.controllerView = controller
@@ -27,17 +28,16 @@ class CarListViewModel: NSObject {
         self.fetchCars()
     }
     
-    func fetchCars() {
-        self.controllerView?.showHUD(type: .loading)
+    private func fetchCars() {
+        SVProgressHUD.show()
         CarListService.shared.fetch { [weak self] (error, cars) in
             guard error == nil else {
-                self?.controllerView?.showHUD(type: .error)
+                SVProgressHUD.showError(withStatus: error?.localizedDescription)
                 self?.cars = nil
                 return
             }
-            
-            self?.controllerView?.showHUD(type: .success)
             self?.cars = cars
+            SVProgressHUD.dismiss()
         }
     }
 }
@@ -45,8 +45,7 @@ class CarListViewModel: NSObject {
 extension CarListViewModel: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let car = self.cars?[indexPath.row]
-        
+        //On selection can display the detail controller with all information about the car
     }
 }
 
