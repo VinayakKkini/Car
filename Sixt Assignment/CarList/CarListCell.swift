@@ -18,10 +18,12 @@ class CarListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //set the placeholder image
         carImageView.image = #imageLiteral(resourceName: "car-placeholder")
     }
     
     override func prepareForReuse() {
+        // clean up all resources
         carImageView.image = #imageLiteral(resourceName: "car-placeholder")
         owner.text = nil
         modelName.text = nil
@@ -30,18 +32,23 @@ class CarListCell: UITableViewCell {
         transmission.text = nil
     }
     
+    
+    /// Configure the cell with `Car` object
+    ///
+    /// - Parameter car: object used to set up the cell
     func configure(with car: Car) {
-        owner.attributedText = attributedString(with: CarTitleKeys.owner.rawValue, value: car.name ?? "")
-        modelName.attributedText = attributedString(with: CarTitleKeys.modelName.rawValue, value: car.modelName  ?? "")
-        fuelType.attributedText = attributedString(with: CarTitleKeys.fuelType.rawValue, value: car.fuelType.displayTitle)
-        cleanliness.attributedText = attributedString(with: CarTitleKeys.cleanliness.rawValue, value: car.innerCleanliness.displayTitle)
-        transmission.attributedText = attributedString(with: CarTitleKeys.transmission.rawValue, value: car.transmission.displayTitle)
+        owner.attributedText = attributedString(with: Car.DisplayKeys.owner.rawValue, value: car.name ?? "")
+        modelName.attributedText = attributedString(with: Car.DisplayKeys.modelName.rawValue, value: car.modelName  ?? "")
+        fuelType.attributedText = attributedString(with: Car.DisplayKeys.fuelType.rawValue, value: car.fuelType.displayTitle)
+        cleanliness.attributedText = attributedString(with: Car.DisplayKeys.cleanliness.rawValue, value: car.innerCleanliness.displayTitle)
+        transmission.attributedText = attributedString(with: Car.DisplayKeys.transmission.rawValue, value: car.transmission.displayTitle)
         
         guard let imageURL = car.carImageURL else {
             carImageView.image = #imageLiteral(resourceName: "car-placeholder")
             return
         }
         
+        // fetch the image from the server
         CarImageService.shared.fetch(imageURL: imageURL) { (image) in
             DispatchQueue.main.async { [weak self] in
                 self?.carImageView.image = image ?? #imageLiteral(resourceName: "car-placeholder")
@@ -54,14 +61,8 @@ class CarListCell: UITableViewCell {
 
 extension CarListCell {
     
-    private enum CarTitleKeys: String {
-        case owner = "Owner"
-        case modelName = "Model Name"
-        case fuelType = "Fuel Type"
-        case cleanliness = "Cleanliness"
-        case transmission = "Transmission"
-    }
-    
+    /// Creates an attributted string by combining both title and values. Title will have bold font and
+    /// value being regular weight.
     private func attributedString(with title: String, value: String) -> NSAttributedString {
         let attribute = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize:15), NSAttributedStringKey.foregroundColor: UIColor.black]
         let attributedTitle = NSMutableAttributedString(string: title, attributes: attribute)
