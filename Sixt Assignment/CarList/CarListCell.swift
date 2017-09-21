@@ -21,12 +21,21 @@ class CarListCell: UITableViewCell {
         carImageView.image = #imageLiteral(resourceName: "car-placeholder")
     }
     
+    override func prepareForReuse() {
+        carImageView.image = #imageLiteral(resourceName: "car-placeholder")
+        owner.text = nil
+        modelName.text = nil
+        fuelType.text = nil
+        cleanliness.text = nil
+        transmission.text = nil
+    }
+    
     func configure(with car: Car) {
-        owner.text = car.name
-        modelName.text = car.modelName
-        fuelType.text = car.fuelType.displayTitle
-        cleanliness.text = car.innerCleanliness.displayTitle
-        transmission.text = car.transmission.displayTitle
+        owner.attributedText = attributedString(with: CarTitleKeys.owner.rawValue, value: car.name ?? "")
+        modelName.attributedText = attributedString(with: CarTitleKeys.modelName.rawValue, value: car.modelName  ?? "")
+        fuelType.attributedText = attributedString(with: CarTitleKeys.fuelType.rawValue, value: car.fuelType.displayTitle)
+        cleanliness.attributedText = attributedString(with: CarTitleKeys.cleanliness.rawValue, value: car.innerCleanliness.displayTitle)
+        transmission.attributedText = attributedString(with: CarTitleKeys.transmission.rawValue, value: car.transmission.displayTitle)
         
         guard let imageURL = car.carImageURL else {
             carImageView.image = #imageLiteral(resourceName: "car-placeholder")
@@ -44,6 +53,7 @@ class CarListCell: UITableViewCell {
 
 
 extension CarListCell {
+    
     private enum CarTitleKeys: String {
         case owner = "Owner"
         case modelName = "Model Name"
