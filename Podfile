@@ -6,7 +6,6 @@ target 'Sixt' do
   use_frameworks!
 
   pod 'Alamofire'
-  pod 'SVProgressHUD'
   
   target 'SixtTests' do
     inherit! :search_paths
