@@ -24,6 +24,7 @@ class CarListViewModel: NSObject {
         self.controllerView = controller
         self.controllerView?.tableView.delegate = self
         self.controllerView?.tableView.dataSource = self
+        self.controllerView?.tableView.tableFooterView = UIView()
         self.fetchCars()
     }
     
