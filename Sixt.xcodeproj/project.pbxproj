@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		23AB160B1F72DDA800437006 /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB160A1F72DDA800437006 /* CarListService.swift */; };
 		23AB16101F72F81100437006 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB160F1F72F81100437006 /* CarListViewModel.swift */; };
+		23AB16121F7301D000437006 /* DisplayHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB16111F7301D000437006 /* DisplayHUD.swift */; };
+		23AB16141F7303AC00437006 /* CarListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB16131F7303AC00437006 /* CarListCell.swift */; };
+		23AB16161F737CC000437006 /* CarImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB16151F737CC000437006 /* CarImageFetch.swift */; };
 		23B9366A1F72A13F0017C7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B936691F72A13F0017C7EB /* AppDelegate.swift */; };
 		23B9366C1F72A13F0017C7EB /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B9366B1F72A13F0017C7EB /* CarListViewController.swift */; };
 		23B9366F1F72A13F0017C7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9366D1F72A13F0017C7EB /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		233C6107EF933E434C1E089A /* Pods-SixtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixtTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixtTests/Pods-SixtTests.debug.xcconfig"; sourceTree = "<group>"; };
 		23AB160A1F72DDA800437006 /* CarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListService.swift; sourceTree = "<group>"; };
 		23AB160F1F72F81100437006 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		23AB16111F7301D000437006 /* DisplayHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayHUD.swift; sourceTree = "<group>"; };
+		23AB16131F7303AC00437006 /* CarListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCell.swift; sourceTree = "<group>"; };
+		23AB16151F737CC000437006 /* CarImageFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageFetch.swift; sourceTree = "<group>"; };
 		23B936661F72A13F0017C7EB /* Sixt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sixt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B936691F72A13F0017C7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23B9366B1F72A13F0017C7EB /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				23AB160A1F72DDA800437006 /* CarListService.swift */,
+				23AB16151F737CC000437006 /* CarImageFetch.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			children = (
 				23B9366B1F72A13F0017C7EB /* CarListViewController.swift */,
 				23AB160F1F72F81100437006 /* CarListViewModel.swift */,
+				23AB16131F7303AC00437006 /* CarListCell.swift */,
 			);
 			path = CarList;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 				23AB160D1F72F7D500437006 /* NetworkServices */,
 				23AB160E1F72F7F200437006 /* CarList */,
 				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
+				23AB16111F7301D000437006 /* DisplayHUD.swift */,
 				23B936701F72A13F0017C7EB /* Assets.xcassets */,
 				23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */,
 				23B936751F72A13F0017C7EB /* Info.plist */,
@@ -375,9 +384,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23AB16101F72F81100437006 /* CarListViewModel.swift in Sources */,
+				23AB16161F737CC000437006 /* CarImageFetch.swift in Sources */,
 				23B9366C1F72A13F0017C7EB /* CarListViewController.swift in Sources */,
 				23B9366A1F72A13F0017C7EB /* AppDelegate.swift in Sources */,
 				23B9368A1F72A4190017C7EB /* Car.swift in Sources */,
+				23AB16121F7301D000437006 /* DisplayHUD.swift in Sources */,
+				23AB16141F7303AC00437006 /* CarListCell.swift in Sources */,
 				23AB160B1F72DDA800437006 /* CarListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
