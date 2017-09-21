@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SVProgressHUD
 
 class CarListViewModel: NSObject {
     private let cellIdentifier = "CarListCell"
@@ -29,15 +28,15 @@ class CarListViewModel: NSObject {
     }
     
     private func fetchCars() {
-        SVProgressHUD.show()
+        controllerView?.showHUD(withStatus: "Loading")
         CarListService.shared.fetch { [weak self] (error, cars) in
             guard error == nil else {
-                SVProgressHUD.showError(withStatus: error?.localizedDescription)
+                self?.controllerView?.dismissHUD()
                 self?.cars = nil
                 return
             }
             self?.cars = cars
-            SVProgressHUD.dismiss()
+            self?.controllerView?.dismissHUD()
         }
     }
 }

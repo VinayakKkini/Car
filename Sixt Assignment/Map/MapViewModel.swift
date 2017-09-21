@@ -8,7 +8,6 @@
 
 import Foundation
 import MapKit
-import SVProgressHUD
 
 class MapViewModel: NSObject {
     private let annotationIdentifier = "CarAnnotationIdentifier"
@@ -33,14 +32,14 @@ class MapViewModel: NSObject {
     
     /// can be used to fetch cars from the server
     private func fetchCars() {
-        SVProgressHUD.show()
+        controllerView?.showHUD(withStatus: "Loading")
         CarListService.shared.fetch { [weak self] (error, cars) in
             guard error == nil else {
-                SVProgressHUD.showError(withStatus: error?.localizedDescription)
+                self?.controllerView?.dismissHUD()
                 self?.cars = nil
                 return
             }
-            SVProgressHUD.dismiss()
+            self?.controllerView?.dismissHUD()
             self?.cars = cars
         }
     }
