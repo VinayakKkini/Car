@@ -97,6 +97,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		233BA8231F7456720045F90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				233BA8211F744D9A0045F90B /* FetchCar.swift */,
+				23E8E6301F743CEC00577C9E /* DisplayHUD.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		23AB160C1F72F7C500437006 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +162,8 @@
 				23AB160D1F72F7D500437006 /* NetworkServices */,
 				23E8E6351F7448B200577C9E /* Modules */,
 				23E8E6341F74441000577C9E /* HUD */,
+				233BA8231F7456720045F90B /* Protocols */,
 				23B9366D1F72A13F0017C7EB /* Main.storyboard */,
-				233BA8211F744D9A0045F90B /* FetchCar.swift */,
 				23B936701F72A13F0017C7EB /* Assets.xcassets */,
 				23B936721F72A13F0017C7EB /* LaunchScreen.storyboard */,
 				23B936751F72A13F0017C7EB /* Info.plist */,
@@ -175,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				23E8E62E1F743CC600577C9E /* ActivityViewController.swift */,
-				23E8E6301F743CEC00577C9E /* DisplayHUD.swift */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
