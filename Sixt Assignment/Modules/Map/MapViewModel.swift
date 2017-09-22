@@ -26,7 +26,7 @@ class MapViewModel: NSObject {
         controllerView = controller
         controllerView?.mapView.delegate = self
         centerMapOnLocation()
-        fetchCars(on: controllerView)
+        fetchCars(on: controllerView?.parent)
     }
 }
 
